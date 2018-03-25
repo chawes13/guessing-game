@@ -2,34 +2,12 @@
 <html lang="en">
   <head>
     <title>Guessing Game</title>
-
-    <!-- Bootstrap and CSS here-->
-    <style>
-      .center {
-        text-align: center;
-      }
-      ul {
-          list-style: none;
-          padding: 0;
-      }
-      img {
-          display: inline;
-          width: 200px;
-          height: 100px;
-      }
-      #footer {
-          width: 100%;
-          border-top: solid 2px black;
-          background-color: white;
-          position: fixed;
-          bottom: 0;
-      }
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
-
-      <div id='app' class="center">
+    <div class="background-layer"></div>
+    <div id='app' class="container center">
 
         <div id='headers'>
           <h1>Play the Guessing Game!</h1>
@@ -40,44 +18,40 @@
             <form>
                 <div id='input-parent'>
                     <input id="player-input" type="text" placeholder="#" maxlength="3" autofocus>
-                    <button type="submit">Go!</button>
-                  </div>
+                    <button id="submit" class="btn btn-success" type="submit">Go!</button>
+                </div>
         
-                  <div id='guesses'>
-                    <ul>
-                        <li>-</li>
-                        <li>-</li>
-                        <li>-</li>
-                        <li>-</li>
-                        <li>-</li>
-                    </ul>
-                  </div>
+                <div id='guesses'>
+                  <ul class="guess">
+                      <li>-</li>
+                      <li>-</li>
+                      <li>-</li>
+                      <li>-</li>
+                      <li>-</li>
+                  </ul>
+                </div>
         
-                  <div id="menu-btns">
-                    <input type="reset">
-                    <button id="help" type="button">Help</button>
-                  </div>
+                <div id="menu-btns">
+                  <input id="reset" class="btn btn-danger btn-sm" type="reset">
+                  <button id="help" class="btn btn-info btn-sm" type="button">Help</button>
+                </div>
             </form>
         </div>
-      </div>
+    </div>
 
-
-
-    <div id='footer'>
-        <div>
-          <div class=''>
+    <div id='footer' class="center">
+        <div class="row">
+          <div class="col-sm">
             <img src='fa-logo@2x.png'></img>
           </div>
 
-          <div class=''>
+          <div class="col-sm">
             <h4>Project by Conor Hawes</h4>
           </div>
 
-          <div class=''>
+          <div class="col-sm">
             <img src='grace_hopper_academy.png'></img>
           </div>
-
-
         </div>
     </div>
 
